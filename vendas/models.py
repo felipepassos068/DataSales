@@ -26,3 +26,18 @@ class Venda(models.Model):
 
     def __str__(self):
         return f"Venda {self.id}"
+    def save(self, *args, **kwargs):
+
+        if not self.pk:
+          self.valor_unitario = self.produto.preco
+
+          if self.quantidade > self.produto.quantidade_estoque:
+            raise ValueError("Estoque insuficiente")
+        
+          self.valor_total = self.quantidade * self.valor_unitario
+
+          self.produto.quantidade_estoque -= self.quantidade
+          self.produto.save()
+
+        super().save(*args, **kwargs)
+    
