@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Produtos</title>
+</head>
+<body>
+
+    
+
+    <ul>
+        {% for produto in produtos %}
+            <li>
+                {{ produto.nome }} - R$ {{ produto.preco }} - Estoque: {{ produto.quantidade_estoque }}
+            </li>
+        {% empty %}
+            <li>Nenhum produto cadastrado</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Voltar</a>
+
+</body>
+</html>
