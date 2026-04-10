@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vendas</title>
+</head>
+<body>
+
+    <h1>📊 Lista de Vendas</h1>
+
+    <a href="/">⬅ Voltar</a>
+    <hr>
+
+    <a href="/vendas/criar/"> Registrar Nova Venda</a>
+
+
+
+
+
+    <hr>
+
+    <form method="get">
+        <input type="text" name="produto" placeholder="Buscar por produto">
+        <input type="text" name="vendedor" placeholder="Buscar por vendedor">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <hr>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Produto</th>
+            <th>Vendedor</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+            <th>Data</th>
+            <th>Ações</th>
+        </tr>
+
+        {% for venda in vendas %}
+        <tr>
+            <td>{{ venda.id }}</td>
+            <td>{{ venda.produto.nome }}</td>
+            <td>{{ venda.vendedor.nome }}</td>
+            <td>{{ venda.quantidade }}</td>
+            <td>R$ {{ venda.valor_total }}</td>
+            <td>{{ venda.data_venda }}</td>
+            <td>
+                <a href="{% url 'editar_venda' venda.id %}">Editar</a>
+            </td>
+                
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<h1>Editar Produto</h1>
+
+<a href="/">⬅ Voltar</a>
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label>Nome:</label>
+    <input type="text" name="nome" value="{{ produto.nome }}">
+
+    <br><br>
+
+    <label>Marca:</label>
+    <input type="text" name="marca" value="{{ produto.marca }}">
+
+    <br><br>
+
+    <label>Preço:</label>
+    <input type="number" step="0.01" name="preco" value="{{ produto.preco }}">
+
+    <br><br>
+
+    <label>Quantidade:</label>
+    <input type="number" name="quantidade" value="{{ produto.quantidade_estoque }}">
+
+    <br><br>
+
+    <button type="submit">Salvar</button>
+</form>
+
+{% if erro %}
+    <p style="color:red;">{{ erro }}</p>
+{% endif %}

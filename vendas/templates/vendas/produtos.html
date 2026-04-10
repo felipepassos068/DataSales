@@ -5,19 +5,43 @@
 </head>
 <body>
 
-    
+    <h1>📦 Lista de Produtos</h1>
 
-    <ul>
-        {% for produto in produtos %}
-            <li>
-                {{ produto.nome }} - R$ {{ produto.preco }} - Estoque: {{ produto.quantidade_estoque }}
-            </li>
-        {% empty %}
-            <li>Nenhum produto cadastrado</li>
-        {% endfor %}
-    </ul>
+    <a href="/">⬅ Voltar</a>
 
-    <a href="/">Voltar</a>
+    <hr>
+
+  
+    <h3>Buscar Produto</h3>
+
+    <form method="get">
+        <input type="text" name="nome" placeholder="Nome">
+        <input type="text" name="marca" placeholder="Marca">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <br>
+
+    <a href="/produtos/criar/"> Cadastrar Novo Produto</a>
+
+    <hr>
+
+
+    {% for produto in produtos %}
+        <div style="margin-bottom: 10px;">
+            <strong>{{ produto.nome }}</strong> |
+            Marca: {{ produto.marca }} |
+            Preço: R$ {{ produto.preco }} |
+            Estoque: {{ produto.quantidade_estoque }}
+
+            <br>
+
+            <a href="/produtos/editar/{{ produto.id }}/">✏️ Editar</a> |
+            <a href="/produtos/deletar/{{ produto.id }}/">❌ Deletar</a>
+        </div>
+    {% empty %}
+        <p>Nenhum produto encontrado.</p>
+    {% endfor %}
 
 </body>
 </html>

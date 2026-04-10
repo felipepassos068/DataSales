@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar Venda</title>
+</head>
+<body>
+
+    <h1> Criar Venda</h1>
+
+    <a href="/vendas/">⬅ Voltar</a>
+
+    <hr>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Produto:</label><br>
+         
+
+         <select name="produto">
+             {% for produto in produtos %}
+         <option value="{{ produto.id }}">{{ produto.nome }}</option>
+              {% endfor %}
+         </select>
+
+        <br><br>
+
+        <label>Vendedor:</label><br>
+        <select name="vendedor">
+            {% for vendedor in vendedores %}
+                <option value="{{ vendedor.id }}">
+                    {{ vendedor.nome }}
+                </option>
+            {% endfor %}
+        </select>
+
+        <br><br>
+
+        <label>Quantidade:</label><br>
+        <input type="number" name="quantidade" required>
+
+        <br><br>
+
+        <button type="submit">Salvar Venda</button>
+    </form>
+
+</body>
+</html>
