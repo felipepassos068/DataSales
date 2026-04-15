@@ -41,6 +41,17 @@ form {
     margin: 20px 40px 0px 40px;
 }
 
+.titulo {
+    color: var(--cor5);
+    font: italic normal 2.5em var(--fontTitle);
+    margin: 10px 20px 0 20px;
+    transition: color 0.3s ease;
+}
+
+.dark_title {
+        color: var(--cor3);
+    }
+
 .box {
     display: flex;
     flex-direction: column;

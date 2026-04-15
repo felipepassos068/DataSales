@@ -19,6 +19,7 @@
 * {
     margin: 0;
     padding: 0;
+    max-width: 1905px;
     box-sizing: border-box;
     font-family: var(--font);
     max-width: 1905px;
