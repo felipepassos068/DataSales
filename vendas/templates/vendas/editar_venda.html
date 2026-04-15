@@ -1,0 +1,37 @@
+<h1>Editar Venda</h1>
+
+<a href="/">⬅ Voltar</a>
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label>Produto:</label>
+    <select name="produto">
+        {% for produto in produtos %}
+            <option value="{{ produto.id }}" {% if produto.id == venda.produto.id %}selected{% endif %}>
+                {{ produto.nome }}
+            </option>
+        {% endfor %}
+    </select>
+
+    <br><br>
+
+    <label>Vendedor:</label>
+    <select name="vendedor">
+        {% for vendedor in vendedores %}
+            <option value="{{ vendedor.id }}" {% if vendedor.id == venda.vendedor.id %}selected{% endif %}>
+                {{ vendedor.nome }}
+            </option>
+        {% endfor %}
+    </select>
+
+    <br><br>
+
+    <label>Quantidade:</label>
+    <input type="number" name="quantidade" value="{{ venda.quantidade }}">
+
+    <br><br>
+
+    <button type="submit">Salvar</button>
+</form>

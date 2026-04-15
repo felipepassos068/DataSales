@@ -14,7 +14,7 @@
 <body>
     <main class="principal">
     <header>
-        <a href="{% url 'home' %}"><img class="Logo_D" src="{% static 'img/letra-d.png' %}" alt="Logo DataSales" width="40px"></a>
+        <a href="/home/"><img class="Logo_D" src="{% static 'img/letra-d.png' %}" alt="Logo DataSales" width="40px"></a>
         <h1>DataSales</h1>
         <div class="modo">
             <img class="sol" src="{% static 'img/sun.png' %}" alt="sol" width="18px" height="18px">
@@ -25,14 +25,14 @@
     </header>
     <main class="buttons">
         <section>
-            <a href="consult-product.html" class="links"><img class="prod" src="{% static 'img/produtos.png' %}" alt="consultar produtos" height="70px"><h2>CONSULTAR PRODUTOS</h2></a>
+            <a href="/consultar/produtos/" class="links"><img class="prod" src="{% static 'img/produtos.png' %}" alt="consultar produtos" height="70px"><h2>CONSULTAR PRODUTOS</h2></a>
         </section>
         <section>
-            <a href="consult-venda.html" class="links"><img class="sell" src="{% static 'img/venda.png' %}" alt="consultar vendas" height="70px"><h2>CONSULTAR VENDAS</h2></a>
+            <a href="/consultar/vendas/" class="links"><img class="sell" src="{% static 'img/venda.png' %}" alt="consultar vendas" height="70px"><h2>CONSULTAR VENDAS</h2></a>
         </section>
     </main>
         <aside>
-            <a class="back" href="{% url 'home' %}" target="_parent">Voltar</a>
+            <a class="back" href="/home/" target="_parent">Voltar</a>
         </aside>
     <footer>
         <p>&copy DataSales - Desenvolvido por <a class="github" href="https://github.com/felipepassos068" target="_blank">Felipe Passos</a> e <a class="github" href="https://github.com/Rhayron-w" target="_blank">Wdson Rhayron</a></p>
