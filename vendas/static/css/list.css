@@ -19,7 +19,6 @@
 * {
     margin: 0;
     padding: 0;
-    max-width: 1905px;
     box-sizing: border-box;
     font-family: var(--font);
     max-width: 1905px;
@@ -43,7 +42,7 @@ body {
 }
 
 .lista {
-    width: 100vw;
+    max-width: 1905px;
 }
 
 .titulo {
@@ -238,6 +237,7 @@ body {
     }
 
 .tabela {
+    max-width: 1905px;
     margin: 10px;
     padding: 5px;
     border: 2px solid var(--cor5);
@@ -272,3 +272,60 @@ body {
     .dados_dark{
         color: white;
     }
+
+@media (max-width: 595px) {
+    .tabela {
+        max-width: 550px;
+        padding: 0;
+        margin: 0;
+    }
+    .title-table > th {
+        max-height: 60px;
+        max-width: 90px;
+        padding: 0;
+    }
+    .dados {
+        max-height: 60px;
+        max-width: 90px;
+        padding: 0;
+        text-indent: 1px;
+    }
+}
+
+@media (max-width: 400px) {
+    .tabela {
+        max-width: 350px;
+        padding: 0;
+        margin: 0;
+    }
+    .title-table > th {
+        max-height: 40px;
+        max-width: 70px;
+        padding: 0;
+    }
+    .dados {
+        max-height: 40px;
+        max-width: 70px;
+        padding: 0;
+        text-indent: 1px;
+    }
+}
+
+@media (max-width: 350px) {
+    .tabela {
+        max-width: 300px;
+        padding: 0;
+        margin: 0;
+    }
+    .title-table > th {
+        max-height: 30px;
+        max-width: 60px;
+        padding: 0;
+    }
+    .dados {
+        max-height: 30px;
+        max-width: 60px;
+        padding: 0;
+        text-indent: 0;
+    }
+}

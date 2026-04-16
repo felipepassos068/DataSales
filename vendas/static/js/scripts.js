@@ -128,30 +128,30 @@ function mudarTema(isDark) {
 
 //Função para trocar imagens para o modo claro
 function lightMode() {
-    if (elements.logo) elements.logo.src = "../../static/img/letra-d.png"
-    if (elements.logoSol) elements.logoSol.src = "../../static/img/sun.png"
-    if (elements.logoLua) elements.logoLua.src = "../../static/img/lua-crescente.png"
-    if (elements.logoReg) elements.logoReg.src = "../../static/img/editar.png"
-    if (elements.logoCons) elements.logoCons.src = "../../static/img/pesquisa-de-lupa.png"
-    if (elements.logoRelat) elements.logoRelat.src = "../../static/img/relatorio.png"
-    if (elements.logoVenda) elements.logoVenda.src = "../../static/img/carrinho.png"
-    if (elements.logoRegis) elements.logoRegis.src = "../../static/img/registro.png"
-    if (elements.logoProd) elements.logoProd.src = "../../static/img/produtos.png"
-    if (elements.logoSell) elements.logoSell.src = "../../static/img/venda.png"
+    if (elements.logo) elements.logo.src = "/static/img/letra-d.png"
+    if (elements.logoSol) elements.logoSol.src = "/static/img/sun.png"
+    if (elements.logoLua) elements.logoLua.src = "/static/img/lua-crescente.png"
+    if (elements.logoReg) elements.logoReg.src = "/static/img/editar.png"
+    if (elements.logoCons) elements.logoCons.src = "/static/img/pesquisa-de-lupa.png"
+    if (elements.logoRelat) elements.logoRelat.src = "/static/img/relatorio.png"
+    if (elements.logoVenda) elements.logoVenda.src = "/static/img/carrinho.png"
+    if (elements.logoRegis) elements.logoRegis.src = "/static/img/registro.png"
+    if (elements.logoProd) elements.logoProd.src = "/static/img/produtos.png"
+    if (elements.logoSell) elements.logoSell.src = "/static/img/venda.png"
 }
 
 //Função para trocar imagens para o modo escuro
 function darkMode() {
-    if (elements.logo) elements.logo.src = "../../static/img/letra-d-dark.png"
-    if (elements.logoSol) elements.logoSol.src = "../../static/img/sun-dark.png"
-    if (elements.logoLua) elements.logoLua.src = "../../static/img/lua-crescente-dark.png"
-    if (elements.logoReg) elements.logoReg.src = "../../static/img/editar-dark.png"
-    if (elements.logoCons) elements.logoCons.src = "../../static/img/pesquisa-de-lupa-dark.png"
-    if (elements.logoRelat) elements.logoRelat.src = "../../static/img/relatorio-dark.png"
-    if (elements.logoVenda) elements.logoVenda.src = "../../static/img/carrinho-dark.png"
-    if (elements.logoRegis) elements.logoRegis.src = "../../static/img/registro-dark.png"
-    if (elements.logoProd) elements.logoProd.src = "../../static/img/produtos-dark.png"
-    if (elements.logoSell) elements.logoSell.src = "../../static/img/venda-dark.png"
+    if (elements.logo) elements.logo.src = "/static/img/letra-d-dark.png"
+    if (elements.logoSol) elements.logoSol.src = "/static/img/sun-dark.png"
+    if (elements.logoLua) elements.logoLua.src = "/static/img/lua-crescente-dark.png"
+    if (elements.logoReg) elements.logoReg.src = "/static/img/editar-dark.png"
+    if (elements.logoCons) elements.logoCons.src = "/static/img/pesquisa-de-lupa-dark.png"
+    if (elements.logoRelat) elements.logoRelat.src = "/static/img/relatorio-dark.png"
+    if (elements.logoVenda) elements.logoVenda.src = "/static/img/carrinho-dark.png"
+    if (elements.logoRegis) elements.logoRegis.src = "/static/img/registro-dark.png"
+    if (elements.logoProd) elements.logoProd.src = "/static/img/produtos-dark.png"
+    if (elements.logoSell) elements.logoSell.src = "/static/img/venda-dark.png"
 }
 
 //Chama a função para verificar o tema do site

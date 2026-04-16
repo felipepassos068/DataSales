@@ -21,6 +21,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font);
+    max-width: 1920px;
 }
 
 header {
@@ -105,12 +106,12 @@ header {
             transition-duration: 0.2s;
         }
 
-    @media (max-width: 422px) {
-        .Logo_D {
-            width: 30px;
-            height: 30px;
-        }
-        h1 {
-            font-size: 1.5em;
-        }
+@media (max-width: 422px) {
+    .Logo_D {
+        width: 30px;
+        height: 30px;
     }
+    h1 {
+        font-size: 1.5em;
+    }
+}
