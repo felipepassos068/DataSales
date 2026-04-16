@@ -42,7 +42,10 @@ function carregarDados() {
                         labels: labels,
                         datasets: [{
                             label: 'Vendas por Produto',
-                            data: valores
+                            data: valores,
+                            maxBarThickness: 50,
+                            backgroundColor: '#4C9170',
+                            borderColor: '#1E5E3F',
                         }]
                     },
                     options: {
