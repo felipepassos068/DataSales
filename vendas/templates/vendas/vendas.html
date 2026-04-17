@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas</title>
+    <link rel="shortcut icon" href="{% static 'img/financa-light.png' %}" type="image/png" media="(prefers-color-scheme: dark)">
+    <link rel="shortcut icon" href="{% static 'img/financa-dark.png' %}" type="image/png" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="{% static 'css/cabeca.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/list.css' %}" type="text/css">
+</head>
+<body>
+    <main class="principal">
+<header>
+    <a href="/home/"><img class="Logo_D" src="{% static 'img/letra-d.png' %}" alt="Logo DataSales" width="40px"></a>
+    <h1>DataSales</h1>
+    <div class="modo">
+        <img class="sol" src="{% static 'img/sun.png' %}" alt="sol" width="18px" height="18px">
+        <input type="checkbox" name="mode" id="mode">
+        <label for="mode" class="switch"></label>
+        <img class="lua" src="{% static 'img/lua-crescente.png' %}" alt="lua" width="18px" height="18px">
+    </div>
+</header>
+<main class="lista">
+    <h1 class="titulo">Lista de Vendas</h1>
+    <a href="/consultar/" class="back">Voltar</a>
+    <aside class="registrar">
+        <a href="/registrar/venda/" class="cadastrar"> Registrar Nova Venda</a>
+    </aside>
+    <section class="busca">
+    <form method="get">
+        <input type="text" name="produto" placeholder="Buscar por produto" class="search">
+        <input type="text" name="vendedor" placeholder="Buscar por vendedor" class="search">
+        <button type="submit" class="buscar">Buscar</button>
+    </form>
+    </section>
+</main>
+    <table border="1" class="tabela">
+        <tr class="title-table">
+            <th>ID</th>
+            <th>Produto</th>
+            <th>Vendedor</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+            <th>Data</th>
+            <th>Ações</th>
+        </tr>
+        {% for venda in vendas %}
+        <tr>
+            <td class="dados">{{ venda.id }}</td>
+            <td class="dados">{{ venda.produto.nome }}</td>
+            <td class="dados">{{ venda.vendedor.nome }}</td>
+            <td class="dados">{{ venda.quantidade }}</td>
+            <td class="dados">R$ {{ venda.valor_total }}</td>
+            <td class="dados">{{ venda.data_venda }}</td>
+            <td>
+                <a href="{% url 'editar_venda' venda.id %}" class="opt1">Editar</a>
+            </td>     
+        </tr>
+        {% endfor %}
+    </table>
+<script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

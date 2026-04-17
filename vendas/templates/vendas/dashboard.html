@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="{% static 'img/financa-light.png' %}" type="image/png" media="(prefers-color-scheme: dark)">
+    <link rel="shortcut icon" href="{% static 'img/financa-dark.png' %}" type="image/png" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="{% static 'css/dash.css' %}" type="text/css">
+</head>
+<body>
+    <h1>Dashboard</h1>
+<a href="/home/" class="back">Voltar</a>
+
+<div class="container">
+
+
+    <div class="card">
+        <h3>Total de Vendas</h3>
+        <p id="total">...</p>
+    </div>
+
+    <div class="card">
+        <h3>Faturamento</h3>
+        <p id="faturamento">...</p>
+    </div>
+
+    <div>
+        <h2>Melhores Vendedores</h2>
+        <ul id="lista_vendedores"></ul>
+    </div>
+
+ 
+    <div>
+        <h2>Melhores Produtos</h2>
+        <ul id="lista_produtos"></ul>
+    </div>
+
+
+    <div class="grafico-container">
+        <h2>Vendas por Produto</h2>
+        <canvas id="grafico"></canvas>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'js/dashboard.js' %}"></script>
+</body>
+</html>
